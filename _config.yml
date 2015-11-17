@@ -2,7 +2,7 @@
 title: "Site Title"
 email: "email address"
 description: "Description"
-url: "Site URL"
+url: http://segroupproject.github.io
 
 # Build settings
 markdown: kramdown
