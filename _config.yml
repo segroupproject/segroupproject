@@ -1,0 +1,20 @@
+# Site settings
+title: "Site Title"
+email: "email address"
+description: "Description"
+url: "Site URL"
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+
+permalink: /:year/:month/:day/:title
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      category: post

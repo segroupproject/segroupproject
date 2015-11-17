@@ -1,0 +1,32 @@
+---
+layout: null
+title: Rio Olympics
+---
+
+{% include head.html %}
+
+{% include public_header.html %}
+
+<div class="form">
+  <form>
+    Name:<br><input type="text" name="name">
+    <br>
+    Email Address:<br><input type="text" name="email">
+    <br>
+    Credit Card Number:<br><input type="text" name="card">
+    <br>
+    Expiration Date:<br><input type="text" name="date">
+    <br>
+    Card Type:<br>
+    <select>
+      <option value="m">Mastercard</option>
+      <option value="v">Visa</option>
+      <option value="d">Discover</option>
+      <option value="ae">American Express</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+{% include footer.html %}
