@@ -26,14 +26,34 @@
 </section>
 
 
+
+
+<script>
+
+    function login(){
+        var username = document.getElementById("username").value;
+        var pw = document.getElementById("password").value;
+        var errorp = document.getElementById("errorp");
+        
+        if(username=="athlete" && pw=="pw"){
+            window.location = "/athlete";
+        }else if(username=="security" && pw=="pw"){
+            window.location = "/security";
+        }else{
+            errorp.style.display = "block";
+        }
+    }
+
+</script>
+
 <div class="form">
-  <form>
-    Username:<br><input type="text" name="username">
+    <p id="errorp" style="color:red;display:none;">Invalid username/password</p>
+
+    Username:<br><input type="text" id="username" name="username">
     <br>
-    Password:<br><input type="password" name="password">
+    Password:<br><input type="password"  id="password"  name="password">
     <br><br>
-    <input type="submit" value="Submit">
-  </form>
+    <input type="submit" value="Submit" onclick="login();">
 </div>
 
 <section class="footer">
