@@ -7,6 +7,30 @@ title: Rio Olympics
 
 {% include security_header.html %}
 
+
+<script>
+    function responce(id,approve){
+        var respText = document.getElementById("resp"+id);
+        var clickLink = document.getElementById("click"+id);
+        
+        if(approve){
+            respText.style.color = "green";
+            respText.innerHTML = "Approve";
+        }else{
+            respText.style.color = "red";
+            respText.innerHTML = "Deny";
+        }
+        
+        
+        respText.style.display = "block";
+        clickLink.style.display = "none";
+
+    
+    }
+
+</script>
+
+
 <div class="content">
   <div class="schedule">
     <h3>Outstanding Requests</h3>
@@ -14,12 +38,12 @@ title: Rio Olympics
       <tr>
         <td>1</td>
         <td>Request for security escort<br><span class="venue">July 18, 6pm, John Smith</span></td>
-        <td><a href="/security/approve-request">Approve</a> / <a href="/security/deny-request">Deny</a></td>
+        <td><p id="resp1" style="display:none;"></p><span id="click1"><a href="#" onclick="responce(1,true)">Approve</a> / <a href="#" onclick="responce(1,false)">Deny</a></span></td>
       </tr>
       <tr>
         <td>2</td>
         <td>Request for additional event security<br><span class="venue">July 19, 10am, Event Hall C</span></td>
-        <td><a href="/security/approve-request">Approve</a> / <a href="/security/deny-request">Deny</a></td>
+        <td><p id="resp2" style="display:none;"></p><span id="click2"><a href="#" onclick="responce(2,true)">Approve</a> / <a href="#" onclick="responce(2,false)">Deny</a></span></td>
       </tr>
     </table>
   </div>
