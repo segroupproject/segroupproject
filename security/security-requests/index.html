@@ -7,6 +7,30 @@ title: Rio Olympics
 
 {% include security_header.html %}
 
+
+<script>
+    function responce(id,approve){
+        var respText = document.getElementById("resp"+id);
+        var clickLink = document.getElementById("click"+id);
+
+        if(approve){
+            respText.style.color = "green";
+            respText.innerHTML = "Approve";
+        }else{
+            respText.style.color = "red";
+            respText.innerHTML = "Deny";
+        }
+
+
+        respText.style.display = "block";
+        clickLink.style.display = "none";
+
+
+    }
+
+</script>
+
+
 <div class="content">
   <div class="schedule">
     <h3>Outstanding Requests</h3>
